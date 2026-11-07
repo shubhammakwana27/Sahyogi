@@ -1,4 +1,4 @@
-[**Open the Live App →**](https://sahyogi-appapppy-ayzlejhtk3o7wxtm3zkoex.streamlit.app/)
+Click here - [**Open the Live App**](https://sahyogi-appapppy-ayzlejhtk3o7wxtm3zkoex.streamlit.app/)
 
 # SAHYOGI
 
