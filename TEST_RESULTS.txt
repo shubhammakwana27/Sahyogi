@@ -1,0 +1,15 @@
+SAHYOGI PDF redesign validation — 4 November 2026
+
+224 automated tests passed, zero failures/errors/skips.
+Python 3.12 with the real CrewAI 1.15.30 package installed. OpenAI, Sarvam and Gemini SDK responses were simulated, including rejected-key, malformed-output, quota and timeout failures. Expected provider errors in negative tests are not release failures.
+All Python source files also parsed successfully using Python 3.11 syntax rules.
+
+New requirement tests cover all 40 PDF fixture categories, clinical overrides, urgent AI bypass, matching plan and five evidence conditions, rejected/partial proof, Staff-only acceptance, collection reports, support results that leave access open, escalation, ownership, future next actions, accepted named handover, assisted reply provenance, consent withdrawal, guidance hidden after new information and additive persistence.
+
+Actual Chrome for Testing browser checks passed at desktop 1440px and mobile 390px widths: native login forms and session origins, family Marathi reply, Staff plan/documents form, barrier confirmation, separate follow-up approval, family read confirmation, question-mark help, no page overflow in checked mobile views, partial proof stays open, full proof verifies access, visible urgent text stop.
+The 20-page DOCX was rendered to PDF and every page was visually inspected, including Marathi/Hindi glyphs. The same Word/PDF files are included as USER_MANUAL.
+
+Limits: no paid/live provider request, real hospital record, real patient, outgoing notification or Windows runtime was tested. This is not clinical validation, measured AI accuracy, legal/privacy certification or production security approval.
+
+To run the automated checks after installing requirements:
+.\.venv\Scripts\python.exe -m unittest discover -v

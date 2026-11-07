@@ -1,0 +1,29 @@
+SAHYOGI Streamlit host — 7 November 2026
+
+235 automated Python tests passed (227 original tests + 8 Streamlit-host tests).
+Runtime: Python 3.12, Streamlit 1.66.1, original CrewAI requirements installed.
+Live provider responses were simulated in tests; no personal API key was used.
+
+Additional checks passed:
+- Streamlit entrypoint starts and registers its screen component without errors.
+- Existing login and mandatory first-password-change routes work through the host.
+- Separate viewers have separate private backend sessions.
+- Original CSRF, permissions, role checks and stale-event protection are kept.
+- Frontend transport: forms, GET filters, links, validation, repeated clicks,
+  hidden fields, submitter values, frame sizing and message-source validation.
+- Full practice workflow: Marathi question, coordinator assignment and care task,
+  checked plan/documents, confirmed barrier, approved Marathi reply, family read,
+  follow-up progress, support result and all five dispensing checks.
+- All eleven clinical request views return the unchanged original stylesheet.
+- The local package preserves the original source/assets and saved database.
+- Cloud package excludes saved databases, conversations and actual secret files.
+
+Verification limits:
+- Hosted browser could not connect to the local test server; no claim of a new
+  pixel comparison or complete hosted browser interaction is made.
+- Streamlit Community Cloud deployment requires the owner's sign-in and GitHub
+  repository. The requested public URL is not confirmed live by these checks.
+- No real patient outcomes or live provider accuracy were measured.
+
+No original application screen text, CSS or business Python file was changed.
+Deployment requirements are added in the cloud package for automatic setup.

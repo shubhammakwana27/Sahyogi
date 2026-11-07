@@ -1,0 +1,2 @@
+-r requirements_original.txt
+streamlit==1.66.1

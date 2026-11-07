@@ -1,0 +1,2 @@
+# CrewAI mode. Offline sample mode still works without these dependencies.
+crewai[google-genai]==1.15.30

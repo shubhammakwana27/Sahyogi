@@ -1,0 +1,48 @@
+"""Synthetic messages from SAHYOGI.pdf pages 2 and 9-12, with expected routes.
+
+Exact offline fixtures are practice rules, never an AI accuracy benchmark.
+"""
+ROWS=[
+('journey','Documents','अजून औषध मिळालं नाही. कोणती कागदपत्रं लागतील ते माहीत नाही.','DOCUMENTS_ROUTE',False),
+('m01','Access',"The doctor prescribed morphine for my mother, but the hospital pharmacy says it is not available. What should I do?",'AVAILABILITY_REPORTED',False),
+('m02','Access',"Where can I get morphine? The medical stores near our house don't have it.",'DOCUMENTS_ROUTE',False),
+('m03','Supply',"My father's morphine tablets will finish tomorrow. How do I arrange the next supply?",'SUPPLY_CONTINUITY',False),
+('m04','Documents',"The pharmacist is asking for some documents. I don't know which ones are required.",'DOCUMENTS_ROUTE',False),
+('m05','Travel',"We live in Nashik, and my mother's treatment is in Mumbai. Do we have to travel to Mumbai every time for her medicines?",'TRAVEL',False),
+('m06','Cost',"We cannot afford to travel to the hospital again. Is there someone who can help us arrange the medicine?",'COST',False),
+('m07','Evidence',"I collected the medicines, but I am not sure if we received everything the doctor prescribed.",'RECEIPT_REPORTED',False),
+('m08','Clinical',"My father is still in severe pain even after taking his prescribed morphine. What should I do?",'CLINICAL',False),
+('m09','Clinical',"My mother is scared to take morphine because she thinks she will become addicted. Can you explain?",'CLINICAL',False),
+('m10','Clinical',"My father has become very sleepy after taking his pain medicine. Is this normal?",'CLINICAL',False),
+('m11','Clinical',"My mother vomited after taking the medicine. Should I give her another tablet?",'CLINICAL',False),
+('m12','Clinical',"The pain is getting worse at night. Can I increase the morphine dose?",'CLINICAL',False),
+('m13','Clinical',"My father has not passed stools for three days since starting his pain medicines. What should we do?",'CLINICAL',False),
+('m14','Outside focus',"The oncologist advised a CT scan, but I don't know where to book it.",'OUT_OF_SCOPE',False),
+('m15','Outside focus',"My mother's next chemotherapy session is due, but nobody has given us an appointment.",'OUT_OF_SCOPE',False),
+('m16','Clinical',"We missed the hospital appointment because my father was too weak to travel. What should we do now?",'CLINICAL',False),
+('m17','Documents',"The doctor asked us to meet the palliative-care team, but we don't know where their department is.",'DOCUMENTS_ROUTE',False),
+('m18','Documents',"We have reports from three hospitals. Do we need to bring all of them?",'DOCUMENTS_ROUTE',False),
+('m19','Follow-up',"I have sent the reports, but nobody has confirmed whether the doctor has received them.",'FOLLOWUP_FAILURE',False),
+('m20','Clinical',"My mother is in the last stage of cancer. We want to care for her at home. Who can guide us?",'CLINICAL',False),
+('m21','Clinical',"My father is suffering, and I don't know whom to call at night.",'CLINICAL',False),
+('m22','Support',"I am the only person looking after my mother. Is there any support available for caregivers?",'CARE_SUPPORT',False),
+('m23','Clinical',"My mother doesn't want to go to the hospital anymore. What should we do?",'CLINICAL',False),
+('m24','Cost',"We cannot afford all these medicines and repeated hospital visits. Is there any financial assistance?",'COST',False),
+('mr01','Supply','आईचं मॉर्फिनचं औषध संपत आलंय. आता कुठून मिळेल?','SUPPLY_CONTINUITY',False),
+('mr02','Access','डॉक्टरांनी औषध लिहून दिलंय पण मेडिकलमध्ये मिळत नाहीये.','AVAILABILITY_REPORTED',False),
+('mr03','Clinical','बाबांना खूप वेदना होत आहेत. औषध घेऊनही आराम नाही.','CLINICAL',False),
+('mr04','Documents','आम्हाला कोणती कागदपत्रं लागतील ते समजत नाहीये.','DOCUMENTS_ROUTE',False),
+('hi01','Supply','मेरे पापा की दर्द की दवा कल खत्म हो जाएगी। अब क्या करें?','SUPPLY_CONTINUITY',False),
+('hi02','Access','डॉक्टर ने मॉर्फिन लिखी है, लेकिन अस्पताल में दवा नहीं मिल रही।','AVAILABILITY_REPORTED',False),
+('hi03','Clinical','मम्मी को दवा लेने के बाद बहुत नींद आ रही है। क्या करें?','CLINICAL',False),
+('safety_a','Urgent',"My father took morphine and now he is barely waking up and breathing very slowly.",'CLINICAL',True),
+('safety_b','Clinical',"My mother has severe pain. Can I give her double the morphine dose?",'CLINICAL',False),
+('safety_c','Follow-up',"I told you yesterday that the pharmacy doesn't have morphine. Nobody has called me. What should I do?",'FOLLOWUP_FAILURE',False),
+('demo01','Access',"The doctor prescribed morphine for my mother, but we don't know where to get it.",'DOCUMENTS_ROUTE',False),
+('demo02','Supply','आईचं औषध उद्या संपणार आहे. कुठून आणायचं?','SUPPLY_CONTINUITY',False),
+('demo03','Documents',"The pharmacy says we need some documents, but nobody has explained which ones.",'DOCUMENTS_ROUTE',False),
+('demo04','Follow-up',"I told you yesterday we couldn't get the medicine. Why has nobody contacted us?",'FOLLOWUP_FAILURE',False),
+('demo05','Urgent',"My father is very sleepy and breathing slowly after taking morphine.",'CLINICAL',True),
+]
+EXAMPLES={row[0]:{'id':row[0],'group':row[1],'message':row[2],'category':row[3],'urgent':row[4]} for row in ROWS}
+FEATURED=['demo01','demo02','demo03','demo04','demo05']
